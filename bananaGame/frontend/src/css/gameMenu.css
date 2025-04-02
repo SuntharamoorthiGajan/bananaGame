@@ -1,0 +1,201 @@
+/* 
+.gamebg - Styles the background of the game screen
+- Covers the full viewport
+- Uses flexbox to center content
+- Sets a lower z-index to ensure it stays in the background
+*/
+.gamebg {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: -1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.gameButton - Styles game buttons 
+- Sets fixed width & height
+- Centers text with flexbox
+- Adds hover & click animations for better UX
+*/
+.gameButton {
+    width: 500px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* Hover & active effects for game buttons */
+.gameButton:hover {
+    transform: scale(1.1); /* Slightly enlarges button */
+    opacity: 0.8;
+}
+.gameButton:active {
+    transform: scale(0.95); /* Slightly shrinks button when clicked */
+}
+
+/* 
+.Score - Displays user's score 
+- Background styled for readability
+- Positioned using margins 
+*/
+.Score {
+    background-color: aliceblue;
+    width: 200px;
+    height: 150px;
+    padding: 10px 20px;
+    margin-bottom: 30vh;
+    margin-right: -10vh;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* 
+.gameBoard - Defines the game play area 
+- Centers content inside 
+- Uses background image with cover property 
+*/
+.gameBoard {
+    width: 950px;
+    height: 500px;
+    margin-top: 4vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.scoreBoard - Styles the scoreboard area
+- Centers content
+- Expands on hover
+*/
+.scoreBoard {
+    width: 1050px;
+    height: 650px;
+    margin-top: 4vh;
+    margin-right: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/* Expands scoreboard to be scrollable on hover */
+.scoreBoard:hover {
+    height: 650px;
+    overflow-y: auto;
+}
+
+/* 
+.customTable - Styles leaderboard table
+- Uses uppercase text for consistency
+- Ensures proper alignment & spacing
+*/
+.customTable {
+    margin-top: 12vh;
+    text-transform: uppercase;
+    font-family: Garamond, serif;
+    width: 100%;
+    font-size: 3rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    text-align: center;
+}
+
+/* Makes table scrollable if content overflows */
+.customTable tbody {
+    display: block;
+    max-height: 400px; /* Limits visible rows */
+    overflow-y: auto;
+}
+
+/* Ensures table layout remains intact */
+.customTable thead, 
+.customTable tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* Styles for table headers & cells */
+.customTable th, 
+.customTable td {
+    padding: 10px;
+    width: 33.33%; /* Equal width for each column */
+}
+
+/* 
+.customInput - Styles input fields for user interaction 
+- Adds padding & background transparency 
+*/
+.customInput {
+    height: 3rem;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 2px solid #ffcc00;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* 
+.customSubmitButton - Styles submit button 
+- Matches game theme with bright yellow background 
+*/
+.customSubmitButton {
+    background-color: #ffcc00;  
+    height: 3rem;
+    font-family: Garamond, serif;
+    text-transform: uppercase;
+    width: 68vh;
+    padding: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+/* 
+.Game-link - Styles links within the game 
+- Adds text shadow & uppercase format 
+*/
+.Game-link {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+/* Hover effect for game links */
+.Game-link:hover {
+    color: #ffcc00;
+    text-shadow: 7px 7px 9px rgba(0, 0, 0, 0.7);
+}
+
+/* 
+Blinking effect for timer when less than 10 seconds remain 
+- Alternates background color for urgency 
+*/
+@keyframes blinkTimer {
+    0% { background-color: rgba(255, 0, 0, 0.8); }
+    100% { background-color: rgba(255, 100, 100, 0.8); }
+}

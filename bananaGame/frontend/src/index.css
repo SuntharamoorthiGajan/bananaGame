@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background: linear-gradient(to right, #53F8DC, #5170FF);
+}
+
+.logoimg {
+  width: 50px;
+  height: 60px;
+  border-radius:  100%;
+  object-fit: cover;
+}
+
+
+.User_name {
+  padding: 0px 40px;
+  font-weight: bold;
+  font-family: Garamond, serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0px 70px;
+  display: flex;
+  gap: 20px;
+}
+
+.cust-link {
+  text-decoration: none;
+  padding: 0px 20px;
+  font-family: Garamond, serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.cust-link:hover{
+  color: #ffcc00;
+}
+
+.coin-counter {
+  display: flex;
+  align-items: center;
+}
+
+.coin-icon {
+  margin-left: 150px;
+  width: 100px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.coin-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+  color: #ffcc00;
+}
